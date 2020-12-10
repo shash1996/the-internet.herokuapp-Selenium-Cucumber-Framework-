@@ -51,18 +51,19 @@ public class FunctionalUtilities{
 	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	return driver;
 	}
-	public void getScreenshot(String methodname,WebDriver driver) {
+	public String getScreenshot(String scenarioname,WebDriver driver) {
 		 TakesScreenshot ts=(TakesScreenshot) driver;
 		 File source=ts.getScreenshotAs(OutputType.FILE);
 	 
-		 String destinationFile=System.getProperty("user.dir")+"\\reports\\"+methodname+".png";
+		 String destinationFile=System.getProperty("user.dir")+"\\reports\\"+scenarioname+".png";
 		 try {
 			org.apache.commons.io.FileUtils.copyFile(source, new File(destinationFile));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	 }
+	 return destinationFile;
+	}
 	public static void hitUrl() {
 		String url=null;
 		try {
