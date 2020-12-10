@@ -17,15 +17,19 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class FunctionalUtilities{
 	
-	public Properties prop=new Properties();
-	public FileInputStream fis;
-	public WebDriver driver;
+	public static   Properties prop=new Properties();
+	public static   FileInputStream fis;
+	public static  WebDriver driver;
 	
-	public WebDriver getDriver() throws IOException {
-	
-		fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\resources\\global.properties");
-		prop.load(fis);
-		String browser=prop.getProperty("browser");
+	public   WebDriver getDriver(){
+		
+		String browser=null;
+		try {
+			browser = getProperty("browser");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if(browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\java\\resources\\chromedriver.exe");
 			ChromeOptions c=new ChromeOptions();
@@ -59,10 +63,22 @@ public class FunctionalUtilities{
 			e.printStackTrace();
 		}
 	 }
-	public void hitUrl(WebDriver driver) {
-		String url=prop.getProperty("url");
-		driver.get(url);
+	public static void hitUrl() {
+		String url=null;
+		try {
+			url = getProperty("url");
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.get("https://the-internet.herokuapp.com/");
 		
+	}
+	public static  String getProperty(String PropertyName) throws IOException {
+		fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\resources\\global.properties");
+		prop.load(fis);
+		return prop.getProperty(PropertyName);
 	}
 	
 }
