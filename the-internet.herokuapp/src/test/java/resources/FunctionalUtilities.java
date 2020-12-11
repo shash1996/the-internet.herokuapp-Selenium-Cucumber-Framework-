@@ -20,7 +20,6 @@ public class FunctionalUtilities{
 	public static   Properties prop=new Properties();
 	public static   FileInputStream fis;
 	public static  WebDriver driver;
-	
 	public   WebDriver getDriver(){
 		
 		String browser=null;
@@ -54,6 +53,7 @@ public class FunctionalUtilities{
 	public String getScreenshot(String scenarioname,WebDriver driver) {
 		 TakesScreenshot ts=(TakesScreenshot) driver;
 		 File source=ts.getScreenshotAs(OutputType.FILE);
+		 
 	 
 		 String destinationFile=System.getProperty("user.dir")+"\\reports\\"+scenarioname+".png";
 		 try {

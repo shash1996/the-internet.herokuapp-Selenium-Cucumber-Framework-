@@ -32,14 +32,42 @@ public class Stepdefinition   {
 	@Then("We will close the ad popped in the screen")
 	public void we_will_close_the_ad_popped_in_the_screen() {
 	    // Write code here that turns the phrase above into concrete actions
+		ad.close();
 	   
 	}
 
 	@Then("We will get the title of URL")
 	public void we_will_get_the_title_of_URL() {
 	    // Write code here that turns the phrase above into concrete actions
+		ad.getTitle();
 	   
 	}
+	
+//JavascriptAlert
+	
+	@When("User will click on javascript alert link")
+	public void user_will_click_on_javascript_alert_link() {
+	    // Write code here that turns the phrase above into concrete actions
+	   
+	}
+
+	@Then("click on jsalert and accept it")
+	public void click_on_jsalert_and_accept_it() {
+	    // Write code here that turns the phrase above into concrete actions
+	}
+
+	@When("click on jsPrompt and enter {string}")
+	public void click_on_jsPrompt_and_enter(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	   
+	}
+
+	@Then("click on accept")
+	public void click_on_accept() {
+	    // Write code here that turns the phrase above into concrete actions
+	  
+	}
+
 
 
 }

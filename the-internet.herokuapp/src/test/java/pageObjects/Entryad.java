@@ -6,12 +6,19 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import resources.FunctionalUtilities;
 
 public class Entryad extends FunctionalUtilities {
+	
+	
+	@FindBy(xpath = "//div[@class='modal']/div[3]/p")
+	WebElement close;
 	
 	public WebDriver driver;
 	public static Logger log=LogManager.getLogger(Entryad.class.getName());
@@ -26,6 +33,26 @@ public class Entryad extends FunctionalUtilities {
 
 	public void clickonEntryad() {
 		driver.findElement(By.linkText("Entry Ad")).click();
+		log.info("Clicked on Entry Ad link present");
+	}
+
+	public void close() {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(2000);
+			((JavascriptExecutor)driver).executeScript("arguments[0].click()", close);
+		
+			log.info("Closed the ad Pop up");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			log.info("Can not click on the link");
+			e.printStackTrace();
+		}
+	}
+	public void getTitle() {
+		
+
+		log.info("Getting the Title");
 	}
 
 

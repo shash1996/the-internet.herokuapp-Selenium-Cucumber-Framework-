@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import org.junit.AfterClass;
 import org.openqa.selenium.TakesScreenshot;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -16,13 +17,12 @@ import resources.FunctionalUtilities;
 public class Hooks extends FunctionalUtilities {
 	
 	public static Scenario scenario;
-	ExtentTest test;
-	ExtentReports extent=ExtentReporter.getReportObject();
+	 ExtentTest test;
+	static ExtentReports extent=ExtentReporter.getReportObject();
 	@Before
 	public void beforeScenario(Scenario scenario) {
 		Hooks.scenario=scenario;
 		test= extent.createTest(scenario.getName());
-		
 		
 	}
 	@After
@@ -37,6 +37,8 @@ public class Hooks extends FunctionalUtilities {
 			test.log(Status.PASS, "PASSED");
 		}
 		extent.flush();
+		driver.close();
+	
 	}
 
 }

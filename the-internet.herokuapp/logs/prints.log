@@ -1,2 +1,7 @@
-18:37:46.230 [main] INFO  pageObjects.Entryad - Driver is initialized
-18:37:55.663 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+17:53:13.430 [main] INFO  pageObjects.Entryad - Driver is initialized
+17:53:19.912 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+17:53:20.657 [main] INFO  pageObjects.Entryad - Clicked on Entry Ad link present
+17:53:22.699 [main] INFO  pageObjects.Entryad - Closed the ad Pop up
+17:53:22.699 [main] INFO  pageObjects.Entryad - Getting the Title
+17:53:28.796 [main] INFO  pageObjects.Entryad - Driver is initialized
+17:53:34.909 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
