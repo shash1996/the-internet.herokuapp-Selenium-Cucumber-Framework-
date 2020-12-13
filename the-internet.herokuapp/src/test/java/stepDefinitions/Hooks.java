@@ -17,7 +17,7 @@ import resources.FunctionalUtilities;
 public class Hooks extends FunctionalUtilities {
 	
 	public static Scenario scenario;
-	 ExtentTest test;
+	public static ExtentTest test;
 	static ExtentReports extent=ExtentReporter.getReportObject();
 	@Before
 	public void beforeScenario(Scenario scenario) {
@@ -31,6 +31,7 @@ public class Hooks extends FunctionalUtilities {
 			String path=getScreenshot(scenario.getName(), driver);
 			test.fail(scenario.getName()+" is failed");
 			test.addScreenCaptureFromPath(path, scenario.getName());
+			
 			
 		}
 		else {

@@ -22,7 +22,7 @@ public class Stepdefinition   {
 	@Given("We have to go the the url of UAT")
 	public void we_have_to_go_the_the_url_of_UAT() {
 		Launchbrowser.navigatetourl();
-		System.out.println(driver);
+		
 		
 	}
 
@@ -34,7 +34,7 @@ public class Stepdefinition   {
 	}
 
 	@Then("We will close the ad popped in the screen")
-	public void we_will_close_the_ad_popped_in_the_screen() {
+	public void we_will_close_the_ad_popped_in_the_screen() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 		ad.close();
 	   
