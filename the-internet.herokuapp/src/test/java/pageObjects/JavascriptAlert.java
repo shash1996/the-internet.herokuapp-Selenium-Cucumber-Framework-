@@ -21,6 +21,7 @@ public class JavascriptAlert {
 	public JavascriptAlert(WebDriver driver) {
 		this.driver = driver;
 		log.info("Driver is initialised");
+		System.out.println(driver+" javascript");
 		PageFactory.initElements(driver,this);
 	}
 

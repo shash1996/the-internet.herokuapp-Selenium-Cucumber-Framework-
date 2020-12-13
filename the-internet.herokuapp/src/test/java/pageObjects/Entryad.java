@@ -28,6 +28,7 @@ public class Entryad extends FunctionalUtilities {
 	public Entryad(WebDriver driver) {
 		this.driver = driver;
 		log.info("Driver is initialized");
+		System.out.println(driver+" Entry ad");
 		PageFactory.initElements(driver, this);
 	}
 

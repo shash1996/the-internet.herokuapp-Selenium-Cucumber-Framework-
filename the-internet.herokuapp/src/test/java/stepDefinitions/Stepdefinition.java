@@ -17,17 +17,19 @@ public class Stepdefinition   {
 	
 	FunctionalUtilities fu=new FunctionalUtilities();
 	public WebDriver driver=fu.getDriver();
-	Entryad ad=new Entryad(driver);
-	JavascriptAlert jsa=new JavascriptAlert(driver);
+	Entryad ad;
+	JavascriptAlert jsa;
 	@Given("We have to go the the url of UAT")
 	public void we_have_to_go_the_the_url_of_UAT() {
 		Launchbrowser.navigatetourl();
+		System.out.println(driver);
 		
 	}
 
 	@When("User will click on entry ad link")
 	public void user_will_click_on_entry_ad_link() {
 	    // Write code here that turns the phrase above into concrete actions
+		ad=new Entryad(driver);
 	    ad.clickonEntryad();
 	}
 
@@ -50,6 +52,7 @@ public class Stepdefinition   {
 	@When("User will click on javascript alert link")
 	public void user_will_click_on_javascript_alert_link() {
 	    // Write code here that turns the phrase above into concrete actions
+		jsa=new JavascriptAlert(driver);
 		jsa.clicklink();
 	   
 	}
