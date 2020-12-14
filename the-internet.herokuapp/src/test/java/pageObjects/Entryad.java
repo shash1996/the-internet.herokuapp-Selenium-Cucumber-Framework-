@@ -52,8 +52,11 @@ public class Entryad extends FunctionalUtilities {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			log.info("Can not click on the link");
+			e.printStackTrace();
+			Hooks.test.log(Status.INFO, e.getMessage());
 			Assert.fail();
-		   e.printStackTrace();
+		   
+		   
 		}
 	}
 	public void getTitle() {
