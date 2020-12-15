@@ -95,3 +95,48 @@
 13:04:58.050 [main] INFO  pageObjects.JavascriptAlert - Driver is initialised
 13:04:58.708 [main] INFO  pageObjects.JavascriptAlert - Clicked on javascript alert Page
 13:04:58.802 [main] INFO  pageObjects.JavascriptAlert - Accepted the alert
+14:24:06.206 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+14:24:06.211 [main] INFO  pageObjects.Entryad - Driver is initialized
+14:24:06.820 [main] INFO  pageObjects.Entryad - Clicked on Entry Ad link present
+14:24:08.855 [main] INFO  pageObjects.Entryad - Closed the ad Pop up
+14:24:08.856 [main] INFO  pageObjects.Entryad - Getting the Title
+14:24:21.754 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+14:24:21.761 [main] INFO  pageObjects.JavascriptAlert - Driver is initialised
+14:24:22.391 [main] INFO  pageObjects.JavascriptAlert - Clicked on javascript alert Page
+14:24:22.477 [main] INFO  pageObjects.JavascriptAlert - Accepted the alert
+14:27:24.542 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+14:27:24.552 [main] INFO  pageObjects.Entryad - Driver is initialized
+14:27:25.206 [main] INFO  pageObjects.Entryad - Clicked on Entry Ad link present
+14:27:27.241 [main] INFO  pageObjects.Entryad - Closed the ad Pop up
+14:27:27.242 [main] INFO  pageObjects.Entryad - Getting the Title
+14:27:40.251 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+14:27:40.254 [main] INFO  pageObjects.JavascriptAlert - Driver is initialised
+14:27:40.927 [main] INFO  pageObjects.JavascriptAlert - Clicked on javascript alert Page
+14:27:41.027 [main] INFO  pageObjects.JavascriptAlert - Accepted the alert
+14:33:37.546 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+14:33:37.555 [main] INFO  pageObjects.Entryad - Driver is initialized
+14:33:38.293 [main] INFO  pageObjects.Entryad - Clicked on Entry Ad link present
+14:33:40.332 [main] INFO  pageObjects.Entryad - Closed the ad Pop up
+14:33:40.334 [main] INFO  pageObjects.Entryad - Getting the Title
+14:33:52.239 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+14:33:52.248 [main] INFO  pageObjects.JavascriptAlert - Driver is initialised
+14:33:52.880 [main] INFO  pageObjects.JavascriptAlert - Clicked on javascript alert Page
+14:33:52.957 [main] INFO  pageObjects.JavascriptAlert - Accepted the alert
+21:10:06.750 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+21:10:06.830 [main] INFO  pageObjects.Entryad - Driver is initialized
+21:10:07.390 [main] INFO  pageObjects.Entryad - Clicked on Entry Ad link present
+21:10:09.426 [main] INFO  pageObjects.Entryad - Closed the ad Pop up
+21:10:09.428 [main] INFO  pageObjects.Entryad - Getting the Title
+21:10:25.864 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+21:10:25.867 [main] INFO  pageObjects.JavascriptAlert - Driver is initialised
+21:10:26.483 [main] INFO  pageObjects.JavascriptAlert - Clicked on javascript alert Page
+21:10:26.574 [main] INFO  pageObjects.JavascriptAlert - Accepted the alert
+21:21:58.795 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+21:21:58.812 [main] INFO  pageObjects.Entryad - Driver is initialized
+21:21:59.411 [main] INFO  pageObjects.Entryad - Clicked on Entry Ad link present
+21:22:01.450 [main] INFO  pageObjects.Entryad - Closed the ad Pop up
+21:22:01.452 [main] INFO  pageObjects.Entryad - Getting the Title
+21:22:15.536 [main] INFO  pageObjects.Launchbrowser - Browser is initialised
+21:22:15.539 [main] INFO  pageObjects.JavascriptAlert - Driver is initialised
+21:22:16.161 [main] INFO  pageObjects.JavascriptAlert - Clicked on javascript alert Page
+21:22:16.237 [main] INFO  pageObjects.JavascriptAlert - Accepted the alert
