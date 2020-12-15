@@ -46,7 +46,7 @@ public class Entryad extends FunctionalUtilities {
 		// TODO Auto-generated method stub
 		try {
 			Thread.sleep(2000);
-			((JavascriptExecutor)driver).executeScript("arguments[].click()", close);
+			((JavascriptExecutor)driver).executeScript("arguments[0].click()", close);
 		
 			log.info("Closed the ad Pop up");
 		} catch (Exception e) {

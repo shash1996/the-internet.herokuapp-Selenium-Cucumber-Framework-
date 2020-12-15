@@ -36,6 +36,7 @@ public class FunctionalUtilities{
 			dc.acceptInsecureCerts();
 			dc.setBrowserName("chrome");
 			dc.setPlatform(Platform.WINDOWS);
+			//c.addArguments("headless");
 			c.merge(dc);
 			driver=new ChromeDriver(c);
 		}
