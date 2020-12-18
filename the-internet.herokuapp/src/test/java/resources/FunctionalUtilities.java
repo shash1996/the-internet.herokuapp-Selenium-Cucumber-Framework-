@@ -19,8 +19,9 @@ public class FunctionalUtilities{
 	
 	public static   Properties prop=new Properties();
 	public static   FileInputStream fis;
-	public static  WebDriver driver;
-	public   WebDriver getDriver(){
+	public  static WebDriver driver;
+	
+	public  static WebDriver getDriver(){
 		
 		String browser=null;
 		try {
@@ -49,6 +50,7 @@ public class FunctionalUtilities{
 		}
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	//System.out.println(driver+" from main class");
 	return driver;
 	}
 	public String getScreenshot(String scenarioname,WebDriver driver) {
@@ -81,6 +83,10 @@ public class FunctionalUtilities{
 		fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\resources\\global.properties");
 		prop.load(fis);
 		return prop.getProperty(PropertyName);
+	}
+	public  WebDriver givedriver() {
+		return driver;
+		
 	}
 	
 }

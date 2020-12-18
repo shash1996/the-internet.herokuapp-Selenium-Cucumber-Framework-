@@ -16,13 +16,16 @@ import resources.FunctionalUtilities;
 public class Stepdefinition   {
 	
 	FunctionalUtilities fu=new FunctionalUtilities();
+	//public WebDriver driver=fu.getDriver();
+	//public WebDriver driver;
+	//Launchbrowser lb=new Launchbrowser();
 	public WebDriver driver=fu.getDriver();
 	Entryad ad;
 	JavascriptAlert jsa;
 	@Given("We have to go the the url of UAT")
 	public void we_have_to_go_the_the_url_of_UAT() {
+		//lb.navigatetourl();
 		Launchbrowser.navigatetourl();
-		
 		
 	}
 

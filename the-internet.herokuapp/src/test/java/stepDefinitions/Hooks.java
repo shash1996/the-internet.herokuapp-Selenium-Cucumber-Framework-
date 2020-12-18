@@ -10,6 +10,7 @@ import com.aventstack.extentreports.Status;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import pageObjects.Launchbrowser;
 import resources.ExtentReporter;
 import resources.FunctionalUtilities;
 
@@ -18,6 +19,7 @@ public class Hooks extends FunctionalUtilities {
 	
 	public static Scenario scenario;
 	public static ExtentTest test;
+	FunctionalUtilities fu=new FunctionalUtilities();
 	static ExtentReports extent=ExtentReporter.getReportObject();
 	@Before
 	public void beforeScenario(Scenario scenario) {
@@ -29,17 +31,24 @@ public class Hooks extends FunctionalUtilities {
 	public void afterScenario(Scenario scenario) {
 		if(scenario.isFailed()) {
 			String path=getScreenshot(scenario.getName(), driver);
+			//String path=getScreenshot(scenario.getName(), Launchbrowser.fu.givedriver());
+			//System.out.println("driver is "+fu.givedriver());
 			test.fail(scenario.getName()+" is failed");
 			test.addScreenCaptureFromPath(path, scenario.getName());
+			//test.addScreenCaptureFromPath(path, scenario.getName());
+			
 			
 			
 		}
 		else {
 			test.log(Status.PASS, "PASSED");
 		}
+	
 		extent.flush();
 		driver.close();
 	
+		
+		//Launchbrowser.fu.givedriver().close();
 	}
 
 }
