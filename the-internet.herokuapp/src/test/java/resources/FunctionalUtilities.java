@@ -19,9 +19,10 @@ public class FunctionalUtilities{
 	
 	public static   Properties prop=new Properties();
 	public static   FileInputStream fis;
-	public  static WebDriver driver;
+	public   WebDriver driver;
+	public static ThreadLocal<WebDriver> tlDriver=new ThreadLocal<>();
 	
-	public  static WebDriver getDriver(){
+	public   WebDriver getDriver(){
 		
 		String browser=null;
 		try {
@@ -39,7 +40,7 @@ public class FunctionalUtilities{
 			dc.setPlatform(Platform.WINDOWS);
 			//c.addArguments("headless");
 			c.merge(dc);
-			driver=new ChromeDriver(c);
+			tlDriver.set(new ChromeDriver(c));
 		}
 		else if (browser.equalsIgnoreCase("firefox")) {
 			
@@ -48,10 +49,9 @@ public class FunctionalUtilities{
 		else if(browser.equalsIgnoreCase("ie")) {
 			
 		}
-	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-	//System.out.println(driver+" from main class");
-	return driver;
+		driver().manage().window().maximize();
+		driver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		return driver();
 	}
 	public String getScreenshot(String scenarioname,WebDriver driver) {
 		 TakesScreenshot ts=(TakesScreenshot) driver;
@@ -76,7 +76,7 @@ public class FunctionalUtilities{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.get("https://the-internet.herokuapp.com/");
+		tlDriver.get().get("https://the-internet.herokuapp.com/");
 		
 	}
 	public static  String getProperty(String PropertyName) throws IOException {
@@ -84,9 +84,8 @@ public class FunctionalUtilities{
 		prop.load(fis);
 		return prop.getProperty(PropertyName);
 	}
-	public  WebDriver givedriver() {
-		return driver;
-		
+	public static synchronized WebDriver driver() {
+		return tlDriver.get();
 	}
 	
 }

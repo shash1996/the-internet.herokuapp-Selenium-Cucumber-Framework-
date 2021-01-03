@@ -19,20 +19,19 @@ public class Stepdefinition   {
 	//public WebDriver driver=fu.getDriver();
 	//public WebDriver driver;
 	//Launchbrowser lb=new Launchbrowser();
-	public WebDriver driver=fu.getDriver();
 	Entryad ad;
 	JavascriptAlert jsa;
 	@Given("We have to go the the url of UAT")
 	public void we_have_to_go_the_the_url_of_UAT() {
 		//lb.navigatetourl();
-		Launchbrowser.navigatetourl();
+		FunctionalUtilities.hitUrl();
 		
 	}
 
 	@When("User will click on entry ad link")
 	public void user_will_click_on_entry_ad_link() {
 	    // Write code here that turns the phrase above into concrete actions
-		ad=new Entryad(driver);
+		ad=new Entryad(FunctionalUtilities.driver());
 	    ad.clickonEntryad();
 	}
 
@@ -55,7 +54,7 @@ public class Stepdefinition   {
 	@When("User will click on javascript alert link")
 	public void user_will_click_on_javascript_alert_link() {
 	    // Write code here that turns the phrase above into concrete actions
-		jsa=new JavascriptAlert(driver);
+		jsa=new JavascriptAlert(FunctionalUtilities.driver());
 		jsa.clicklink();
 	   
 	}
